@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fc9ef487-46ee-4fae-acd9-ea62107c653d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<field name="cedula" class="java.lang.String"/>
+	<field name="hora" class="java.lang.String"/>
+	<field name="tratamiento" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="9e373b61-46a1-42fa-bf72-ef98a50cf92e" x="153" y="16" width="262" height="45"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Reporte Diario de Citas]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="839dcc40-d71f-4f24-9810-15922c985c2a" mode="Opaque" x="-19" y="-20" width="595" height="99" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="6e9af9e0-5dd2-4dbf-804f-25b09ea21364" x="91" y="20" width="394" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PACIENTES DIARIO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="18edd8ae-f992-42a5-9848-cd855c45790c" x="258" y="61" width="266" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Consultorio Odontologia al Día]]></text>
+				</staticText>
+				<image>
+					<reportElement uuid="7c3b72af-f28f-439c-9c16-bdd38e0e00b0" x="7" y="3" width="112" height="78"/>
+					<imageExpression><![CDATA["/home/yanet/NetBeansProjects/sistemahistoria/src/images/muela.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement uuid="df3d22e2-ec72-46cc-a4d0-ca8b6a237bb7" x="87" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d968d31e-bef1-42d9-bb75-861f9bfff7a8" mode="Opaque" x="1" y="5" width="71" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d968d31e-bef1-42d9-bb75-861f9bfff7a8" mode="Opaque" x="1" y="0" width="71" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cédula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d968d31e-bef1-42d9-bb75-861f9bfff7a8" mode="Opaque" x="168" y="2" width="71" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d968d31e-bef1-42d9-bb75-861f9bfff7a8" mode="Opaque" x="329" y="2" width="100" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tratamiento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement uuid="d63dda4c-3dec-46fb-9003-d34a8ec71ff4" x="168" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{hora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6fd9b7a9-bd70-4491-b908-97429fa13209" x="329" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tratamiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="174e8224-1332-4d6f-bfc3-5401a2c641e1" x="1" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cedula}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="27" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="28" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement uuid="dda16c1e-e280-4d2e-a07b-b1558fb8cab2" x="445" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

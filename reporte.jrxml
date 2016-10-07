@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6765e729-0ca7-4e80-a94f-d73fbea1f5b9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     pacientes.`cedula` AS pacientes_cedula,
+     pacientes.`nacionalidad` AS pacientes_nacionalidad,
+     pacientes.`nombre` AS pacientes_nombre,
+     pacientes.`apellido` AS pacientes_apellido,
+     pacientes.`direccion` AS pacientes_direccion,
+     pacientes.`telefono` AS pacientes_telefono,
+     pacientes.`sexo` AS pacientes_sexo,
+     pacientes.`edad` AS pacientes_edad
+FROM
+     `pacientes` pacientes]]>
+	</queryString>
+	<field name="pacientes_cedula" class="java.lang.String"/>
+	<field name="pacientes_nacionalidad" class="java.lang.String"/>
+	<field name="pacientes_nombre" class="java.lang.String"/>
+	<field name="pacientes_apellido" class="java.lang.String"/>
+	<field name="pacientes_direccion" class="java.lang.String"/>
+	<field name="pacientes_telefono" class="java.lang.String"/>
+	<field name="pacientes_sexo" class="java.lang.String"/>
+	<field name="pacientes_edad" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="fad3092b-b657-4551-afee-9e97454b6d2b" x="115" y="12" width="262" height="47"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Reporte de pacientes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="7ee6594b-df7a-4dcd-9464-0e22c35e1d64" x="46" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[pacientes_cedula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2dbea04d-18a5-45bc-84bd-c8473962fb8c" x="0" y="0" width="34" height="20"/>
+				<textElement/>
+				<text><![CDATA[pacientes_nacionalidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a075127c-6969-4d62-acce-951de4ab465f" x="160" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[pacientes_nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5f155c00-228a-4422-b9fb-14ba7b1f5e54" x="277" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[pacientes_apellido]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement uuid="990f01a0-e0c5-4706-9586-1330882c86c3" x="46" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pacientes_cedula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="59a08454-af35-4156-884c-9bbe3d9d34dc" x="0" y="2" width="34" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pacientes_nacionalidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="df69b7fc-7bfa-45ab-941a-5b6557ca4c45" x="160" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pacientes_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="309b0544-9b37-452d-8951-59f5c4fdc342" x="277" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pacientes_apellido}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
